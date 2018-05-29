@@ -26,8 +26,7 @@ Window
         {
             id: backgroundDollhouseArea
             anchors.fill: parent
-            color: "lightyellow"
-            radius: 15
+            color: "azure"
             border.width: 1
             border.color: "black"
         }
@@ -54,8 +53,7 @@ Window
         {
             id: backgroundReservedArea
             anchors.fill: parent
-            color: "lightcyan"
-            radius: 15
+            color: "honeydew"
             border.width: 1
             border.color: "black"
         }

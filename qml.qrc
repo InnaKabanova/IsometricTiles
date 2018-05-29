@@ -3,7 +3,7 @@
         <file>main.qml</file>
         <file>tile.png</file>
         <file>Dollhouse.qml</file>
-        <file>Floor.qml</file>
+        <file>Plain.qml</file>
         <file>Const.qml</file>
         <file>qmldir</file>
         <file>Tile.qml</file>

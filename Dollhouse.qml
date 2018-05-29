@@ -3,7 +3,12 @@ import "."
 
 Flickable
 {
-    width: Math.floor(parent.width / Const.tilesNum) * Const.tilesNum
+    id: dollhouse
+
+    width: parent.width
+    height: contentHeight
+    property int tileWidth: Math.floor(width / (Const.rows + Const.columns) * 2)
+
     contentWidth: width
     contentHeight: floorOne.height + floorTwo.height
 
@@ -12,20 +17,33 @@ Flickable
         console.log("Dollhouse completed");
     }
 
-    Floor
+    onTileWidthChanged:
+    {
+        console.log("onTileWidthChanged | superTileWidth: " + tileWidth);
+
+    }
+
+    Plain
     {
         id: floorOne
 
-        width: parent.width
         anchors.top: parent.top
         anchors.horizontalCenter: parent.horizontalCenter
+
+        rowsNum: Const.rows
+        columnsNum: Const.columns
+        tileWidth: dollhouse.tileWidth
     }
-    Floor
+
+    Plain
     {
         id: floorTwo
 
-        width: parent.width
         anchors.top: floorOne.bottom
         anchors.horizontalCenter: parent.horizontalCenter
+
+        rowsNum: Const.rows
+        columnsNum: Const.columns
+        tileWidth: dollhouse.tileWidth
     }
 }
